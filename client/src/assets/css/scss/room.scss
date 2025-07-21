@@ -1,0 +1,109 @@
+@use './foundation/colors';
+
+.room-info-icon {
+  width: 25px;
+}
+
+.room-info-description {
+  padding-top: .75rem;
+  font-weight: 500;
+  opacity: .9;
+}
+
+.room-info-description__title {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.room__section-content {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.room__section-title {
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.room__rating-button {
+  padding: 14px 32px !important;
+}
+
+.active-rating__review-star {
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  background-image: url('../img/icons/review_star_empty.svg');
+}
+
+.active-rating__review-star.active {
+  background-image: url('../img/icons/review_star_full.svg');
+}
+
+.active-rating:hover :has(~ .active-rating__review-star:hover),
+.active-rating__review-star:hover {
+  background-image: url('../img/icons/review_star_full.svg');
+}
+
+.active-rating__review-disclaimer {
+  font-size: 14px;
+  // font-weight: 400;
+  opacity: 0.9;
+}
+
+.room-reservation-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  background-color: #ffffff;
+  z-index: 1;
+}
+
+.room-reservation-footer__price {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.room-reservation-footer__nights {
+  font-weight: 400;
+  font-size: 16px;
+  margin-top: -6px;
+  opacity: 0.95;
+}
+
+.room-reservation-footer__edit-button {
+  line-height: 1;
+}
+
+.room__booking-row {
+  border-bottom: 1px solid #d6d6d6;
+}
+
+.booking__delete-button,
+.room__delete-button {
+  padding: 14px 32px;
+  border-radius: 4px;
+  background-color: transparent;
+  border: 1px solid red;
+  color: red;
+  transition: background-color 300ms, color 300ms;
+}
+
+.booking__delete-button:hover,
+.room__delete-button:hover {
+  background-color: red;
+  color: #fff;
+}
+
+.leaflet-container {
+  height: 200px;
+  width: 100%;
+  border-radius: 4px;
+  z-index: 0;
+}
+
+@media (min-width: 992px) {
+  .border-lg-0 {
+    border: none !important;
+  }
+}

@@ -1,0 +1,1059 @@
+{
+	"info": {
+		"_postman_id": "34a90d9c-033e-4e13-8ea3-19db27551561",
+		"name": "FullStack app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24898334"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Registration",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"Test123!1\",\r\n    \"password\": \"deleledsl\",\r\n    \"firstname\": \"soacdsdsfsdfsdf\",\r\n    \"lastname\": \"dfdfwss\",\r\n    \"email\": \"{{$randomEmail}}\",\r\n    \"telephone\": 6934566502,\r\n    \"avatar\": \"\",\r\n    \"role\": \"host\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/user/registration",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"user",
+								"registration"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"Admin123\",\r\n    \"password\": \"Admin123!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Refresh Token",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Access-Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFkbWluMTIzIiwiaWQiOjEsImlhdCI6MTY5NDkxOTEwNiwiZXhwIjoxNjk0OTE5MTY2fQ.Leb53n8YoEbGuN3PHu26AW3CNydfOVLgi2g8ZeXm7J0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFkbWluMTIzIiwiaWQiOjEsImlhdCI6MTY5NDkxOTY3MywiZXhwIjoxNjk0OTE5NzMzfQ.6Lbsdu45yA_W7-O-9BubiY934mcNmNrRmUnW3KEIPQI\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/user/refresh-token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"user",
+								"refresh-token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All /  By Id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Access-Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFkbWluMTIzNDQ1cXFxMTFxIiwiaWQiOjksImlhdCI6MTY5MzQxNTM2Mn0.rlkG0QSE2dMCNnfyDT_SBSX6zBT8d4C2BSTJT1wbwE4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3001/user/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update By Id",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Access-Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFkbWluMTIzNDQ1cXFxMTFxIiwiaWQiOjksImlhdCI6MTY5MzQxNTM2Mn0.rlkG0QSE2dMCNnfyDT_SBSX6zBT8d4C2BSTJT1wbwE4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"searchedRoomId\": [ \"3\" ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/user/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"user",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2",
+									"description": "User's unique ID"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete By Id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Access-Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFkbWluMTIzNDQ1cXFxMTFxIiwiaWQiOjksImlhdCI6MTY5MzQxNTM2Mn0.rlkG0QSE2dMCNnfyDT_SBSX6zBT8d4C2BSTJT1wbwE4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3001/user/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"user",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2",
+									"description": "User's unique ID"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Recommend Rooms",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/user/recommendation/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"user",
+								"recommendation",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Room",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Access-Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRlc3QxMjMhMSIsImlkIjoyLCJpYXQiOjE2OTQzNzUxMjB9.sqQBtwJZsbN5qU1zTA2EK1xp46alypMdw2dQxkFtgWc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"hostId\": 2,\r\n    \"name\": \"name_test1\",\r\n    \"description\": \"description_test1\",\r\n    \"street\": \"Alkionis 16\",\r\n    \"zipcode\": 17561,\r\n    \"neighborhood\": \"Palaio Faliro\",\r\n    \"city\": \"Athens\",\r\n    \"state\": \"Attica\",\r\n    \"country\": \"Greece\",\r\n    \"latitude\": \"37.9270812\",\r\n    \"longitude\": \"23.6921718\",\r\n    \"room_type\": \"Private room\",\r\n    \"neighborhood_description\": \"neighborhood_description_test\",\r\n    \"transport\": \"transition_test\",\r\n    \"accommodates\": 4,\r\n    \"bathrooms\": 1,\r\n    \"bedrooms\": 2,\r\n    \"beds\": 3,\r\n    \"has_couch\": true,\r\n    \"amenities\": [\r\n        \"Wireless Internet\",\r\n        \"Cooler\",\r\n        \"Heating\",\r\n        \"Kitchen\",\r\n        \"TV\",\r\n        \"Parking\",\r\n        \"Elevator\",\r\n        \"Doorman\",\r\n        \"Shampoos\"\r\n    ],\r\n    \"pets_allowed\": false,\r\n    \"smoking_allowed\": true,\r\n    \"events_allowed\": true,\r\n    \"surface\": 78,\r\n    \"price\": 110,\r\n    \"startingRentingDate\": \"2023-09-15\",\r\n    \"endingRentingDate\": \"2024-12-31\",\r\n    \"minimum_nights\": 1,\r\n    \"thumbnail\": \"test_thumb\",\r\n    \"photos\": \"test_photo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/room",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"room"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Available",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Access-Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFkbWluMTIzIiwiaWQiOjEsImlhdCI6MTY5NDYyNDc5NiwiZXhwIjoxNjk0NzExMTk2fQ.nLbopb-cF_ad_PVvFh0uIwlqEe4qWFHSbVSRzqIxfiE",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"location\": \"Spain\",\r\n    \"checkInDate\": \"2023-09-27\",\r\n    \"checkOutDate\": \"2023-09-28\",\r\n    \"accommodates\": 2,  //till here fields mandatory\r\n    \"price\": 350\r\n    //\"room_type\": \"Entire Home/Apt\",\r\n    //\"amenities\": [ \"Kitchen\",\"Elevator\" ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/room/search_available",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"room",
+								"search_available"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All / By Id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Access-Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFkbWluMTIzIiwiaWQiOjEsImlhdCI6MTY5NDkyMjMxOCwiZXhwIjoxNjk0OTIyMzc4fQ.YK5XtsOLfhmje6KEZkInxNP43lLbH0v43n5hFWDR2a0",
+								"type": "text"
+							},
+							{
+								"key": "Refresh-Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFkbWluMTIzIiwiaWQiOjEsImlhdCI6MTY5NDkyMjM0NiwiZXhwIjoxNjk0OTY1NTQ2fQ.oIHrI-Jfj7y3FlFAlTBzB2-N_inYQfPeD5-KvvCZYRc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3001/room/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"room",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "By User Id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Access-Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFkbWluMTIzIiwiaWQiOjEsImlhdCI6MTY5NDc5OTIzNSwiZXhwIjoxNjk0ODg1NjM1fQ._DeCK7GQaUii8qCmJKoK90MjBIeyGYyx3uXUXslbyG8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3001/room/user/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"room",
+								"user",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update By Id",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Access-Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFkbWluMTIzIiwiaWQiOjEsImlhdCI6MTY5NDMwNTE2MywiZXhwIjoxNjk0MzkxNTYzfQ.uiNIfhTOsdW-8-dJexLetBWLKzO9SC9hLP7hFVedAV8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"street\": \"stratigou papagou 23\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/room/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"room",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2",
+									"description": "User's unique ID"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete By Id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Access-Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFkbWluMTIzNDQ1cXFxMTFxIiwiaWQiOjksImlhdCI6MTY5MzQxNTM2Mn0.rlkG0QSE2dMCNnfyDT_SBSX6zBT8d4C2BSTJT1wbwE4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3001/room/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"room",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2",
+									"description": "User's unique ID"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Booking",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Access-Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRlc3QxMjMhMSIsImlkIjoyLCJpYXQiOjE2OTQzNzUxMjB9.sqQBtwJZsbN5qU1zTA2EK1xp46alypMdw2dQxkFtgWc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"clientId\": 3,\r\n    \"roomId\": 2,\r\n    \"checkIn\": \"2023-09-16\",\r\n    \"checkOut\": \"2023-09-18\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/booking",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"booking"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Access-Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFkbWluMTIzIiwiaWQiOjEsImlhdCI6MTY5NDMwNTE2MywiZXhwIjoxNjk0MzkxNTYzfQ.uiNIfhTOsdW-8-dJexLetBWLKzO9SC9hLP7hFVedAV8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3001/booking",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"booking"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get  By Room Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Access-Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFkbWluMTIzIiwiaWQiOjEsImlhdCI6MTY5NDMwNTE2MywiZXhwIjoxNjk0MzkxNTYzfQ.uiNIfhTOsdW-8-dJexLetBWLKzO9SC9hLP7hFVedAV8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/booking/room/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"booking",
+								"room",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By User Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Access-Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFkbWluMTIzIiwiaWQiOjEsImlhdCI6MTY5NDMwNTE2MywiZXhwIjoxNjk0MzkxNTYzfQ.uiNIfhTOsdW-8-dJexLetBWLKzO9SC9hLP7hFVedAV8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/booking/user/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"booking",
+								"user",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete By Id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Access-Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFkbWluMTIzNDQ1cXFxMTFxIiwiaWQiOjksImlhdCI6MTY5MzQxNTM2Mn0.rlkG0QSE2dMCNnfyDT_SBSX6zBT8d4C2BSTJT1wbwE4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3001/booking/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"booking",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1",
+									"description": "User's unique ID"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Rating",
+			"item": [
+				{
+					"name": "Create / Update",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Access-Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRlc3QxMjMhMSIsImlkIjoyLCJpYXQiOjE2OTQzNzUxMjB9.sqQBtwJZsbN5qU1zTA2EK1xp46alypMdw2dQxkFtgWc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"review\": \"Such a wonderful place to enjoy your holidays. Our experience in this room was awesome\",\r\n    \"rating\": 9\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/rating/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"rating",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Access-Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFkbWluMTIzIiwiaWQiOjEsImlhdCI6MTY5NDMwNTE2MywiZXhwIjoxNjk0MzkxNTYzfQ.uiNIfhTOsdW-8-dJexLetBWLKzO9SC9hLP7hFVedAV8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3001/rating",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"rating"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get  By Room Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Access-Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFkbWluMTIzIiwiaWQiOjEsImlhdCI6MTY5NDMwNTE2MywiZXhwIjoxNjk0MzkxNTYzfQ.uiNIfhTOsdW-8-dJexLetBWLKzO9SC9hLP7hFVedAV8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/rating/room/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"rating",
+								"room",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By User Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Access-Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFkbWluMTIzIiwiaWQiOjEsImlhdCI6MTY5NDMwNTE2MywiZXhwIjoxNjk0MzkxNTYzfQ.uiNIfhTOsdW-8-dJexLetBWLKzO9SC9hLP7hFVedAV8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/rating/user/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"rating",
+								"user",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete By Id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Access-Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFkbWluMTIzNDQ1cXFxMTFxIiwiaWQiOjksImlhdCI6MTY5MzQxNTM2Mn0.rlkG0QSE2dMCNnfyDT_SBSX6zBT8d4C2BSTJT1wbwE4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3001/rating/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"rating",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1",
+									"description": "User's unique ID"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Chat",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Access-Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRlc3QxMjMhMSIsImlkIjoyLCJpYXQiOjE2OTQzNzUxMjB9.sqQBtwJZsbN5qU1zTA2EK1xp46alypMdw2dQxkFtgWc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": 3,    //client\r\n    \"roomId\": 8,\r\n    \"text\": \"Hello, i would like to know if breakfast is included in the room\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/chat",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"chat"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All / By Id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Access-Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFkbWluMTIzIiwiaWQiOjEsImlhdCI6MTY5NDMwNTE2MywiZXhwIjoxNjk0MzkxNTYzfQ.uiNIfhTOsdW-8-dJexLetBWLKzO9SC9hLP7hFVedAV8",
+								"type": "text"
+							},
+							{
+								"key": "Refresh-Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFkbWluMTIzIiwiaWQiOjEsImlhdCI6MTY5NDk3MDMyMSwiZXhwIjoxNjk1MDEzNTIxfQ.G8qkmklurddx7KoH7x16__X03FBVeeBg97_odp0dOYg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3001/chat/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"chat",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get  By Room Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Access-Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFkbWluMTIzIiwiaWQiOjEsImlhdCI6MTY5NDMwNTE2MywiZXhwIjoxNjk0MzkxNTYzfQ.uiNIfhTOsdW-8-dJexLetBWLKzO9SC9hLP7hFVedAV8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/chat/room/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"chat",
+								"room",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete By Id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Access-Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFkbWluMTIzNDQ1cXFxMTFxIiwiaWQiOjksImlhdCI6MTY5MzQxNTM2Mn0.rlkG0QSE2dMCNnfyDT_SBSX6zBT8d4C2BSTJT1wbwE4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3001/chat/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"chat",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1",
+									"description": "User's unique ID"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Message",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Access-Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRlc3QxMjMhMSIsImlkIjoyLCJpYXQiOjE2OTQzNzUxMjB9.sqQBtwJZsbN5qU1zTA2EK1xp46alypMdw2dQxkFtgWc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "////////////// if client\r\n{\r\n    \"roomId\": 8,\r\n    \"userId\": 3,\r\n    \"text\": \"Than you very much for the information!\"\r\n}\r\n//////////////OR ( if host )\r\n/*\r\n{\r\n    \"chatId\": 3,\r\n    \"userId\": 2,\r\n    \"text\": \"Than you very much for the information!\"\r\n}\r\n*/",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/message",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"message"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Chat Messages",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Access-Token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlRlc3QxMjMhMSIsImlkIjoyLCJpYXQiOjE2OTQzNzUxMjB9.sqQBtwJZsbN5qU1zTA2EK1xp46alypMdw2dQxkFtgWc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "////////////// if client\r\n{\r\n    \"clientId\": 3,\r\n    \"roomId\": 8\r\n}\r\n//////////////OR ( if host )\r\n/*\r\n{\r\n    \"chatId\": 3\r\n}\r\n*/",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/message/history",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"message",
+								"history"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,44 @@
+@use "../../../../../assets/css/scss/foundation/colors";
+
+.login-form {
+  position: absolute;
+  width: 94vw;
+  max-width: 400px;
+  top: 50vh;
+  left: 50vw;
+  margin-top: -150px;
+  margin-left: max(calc(-94vw / 2), -200px);
+  background-color: colors.$bg-main;
+  border-radius: 4px;
+  z-index: 20;
+}
+
+.login-form .form-label {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.login-form__submit-button {
+  background-color: colors.$accent;
+  border-radius: 4px;
+  color: colors.$font-secondary;
+  padding: 16px 32px;
+  opacity: 1;
+  transition: opacity 200ms;
+}
+
+.login-form__submit-button:hover {
+  opacity: 0.9;
+}
+
+.login-form__submit-button p {
+  font-size: 20px;
+  font-weight: 500;
+  padding-bottom: 1px;
+}
+
+@media (min-width: 576px) {
+  .login-form {
+    margin-left: -200px;
+  }
+}

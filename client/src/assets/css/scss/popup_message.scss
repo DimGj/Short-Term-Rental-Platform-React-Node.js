@@ -1,0 +1,31 @@
+@use './foundation/colors';
+
+.popup-blur-wrapper {
+  position: fixed;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 50;
+  background-color: #0000007e;
+}
+
+.popup-message {
+  position: absolute;
+  width: min(100vw, 300px);
+  height: 150px;
+  top: 50%;
+  margin-top: -75px;
+  left: 50%;
+  margin-left: max(-100vw / 2, -150px);
+  z-index: 100;
+  background-color: colors.$bg-main;
+  border-radius: 4px;
+}
+
+.popup-message p {
+  font-weight: 500;
+  font-size: 18px;
+}

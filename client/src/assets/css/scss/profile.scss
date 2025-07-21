@@ -1,0 +1,13 @@
+@use './foundation/colors';
+
+.settings__input {
+  max-width: 50%;
+}
+
+.settings__edit-button {
+  padding: 14px !important;
+}
+
+.settings__edit-button img {
+  width: 25px;
+}

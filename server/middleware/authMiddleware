@@ -1,0 +1,29 @@
+const { verify } = require("jsonwebtoken") 
+
+const validateToken = (req, res, next) => {
+    const accessToken = req.header("Access-Token")
+    const refreshToken = req.header("Refresh-Token")
+
+    if (!accessToken && !refreshToken)
+        return res.json({ error: "900", msg: "Παρακαλώ συνδεθείτε ξανά" });
+
+    try {
+        if (accessToken) {
+            const validAccessToken = verify(accessToken, "BigSecret");
+            if (validAccessToken) {
+                req.decoded = validAccessToken
+                return next()
+            }
+        }
+
+        if (refreshToken) {
+            const validRefreshToken = verify(refreshToken, "SecondBigSecret");
+            if (validRefreshToken) {
+                req.decoded = validRefreshToken
+                return next()
+            }
+        }
+    } catch (e) { return res.json({ error: "901", msg:"Παρακαλώ συνδεθείτε ξανά." })}
+}
+
+module.exports = { validateToken }

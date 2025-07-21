@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="540" height="555" version="1.1" viewBox="0 0 142.87 146.84" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <g transform="translate(-182.56 -80.703)">
+  <g transform="translate(-582.08 -4428.1)">
+   <g transform="translate(-785.81 -160.41)">
+    <rect x="1550.5" y="4683.8" width="142.87" height="132.29" rx="0" ry="11.024" color="#000000" color-rendering="auto" fill="#259fc0" image-rendering="auto" shape-rendering="auto" solid-color="#000000" style="isolation:auto;mix-blend-mode:normal"/>
+    <g fill="#f0f0f0" fill-rule="evenodd">
+     <path transform="scale(.26458)" d="m5900 17823v100h100v-100zm120 0v100h100v-100zm120 0v100h100v-100zm120 0v100h100v-100zm-360 120v100h100v-100zm120 0v100h100v-100zm120 0v100h100v-100zm120 0v100h100v-100zm-360 120v100h100v-100zm120 0v100h100v-100zm120 0v100h100v-100zm120 0v100h100v-100z"/>
+     <path d="m1582.2 4705h15.875v-31.75h-15.875z" stroke="#259fc0" stroke-linejoin="round" stroke-width="7.9375"/>
+     <path d="m1645.7 4705h15.875v-31.75h-15.875z" stroke="#259fc0" stroke-linejoin="round" stroke-width="7.9375"/>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg>

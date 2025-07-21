@@ -1,0 +1,175 @@
+@use './foundation/colors';
+
+/* source-sans-3-300 - greek_latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Source_Sans_3';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/Source_Sans_3/source-sans-3-v9-greek_latin-300.woff2') format('woff2'),
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    url('../fonts/Source_Sans_3/source-sans-3-v9-greek_latin-300.ttf') format('truetype');
+  /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+
+/* source-sans-3-regular - greek_latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Source_Sans_3';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/Source_Sans_3/source-sans-3-v9-greek_latin-regular.woff2') format('woff2'),
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    url('../fonts/Source_Sans_3/source-sans-3-v9-greek_latin-regular.ttf') format('truetype');
+  /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+
+/* source-sans-3-500 - greek_latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Source_Sans_3';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/Source_Sans_3/source-sans-3-v9-greek_latin-500.woff2') format('woff2'),
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    url('../fonts/Source_Sans_3/source-sans-3-v9-greek_latin-500.ttf') format('truetype');
+  /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+
+/* source-sans-3-600 - greek_latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Source_Sans_3';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/Source_Sans_3/source-sans-3-v9-greek_latin-600.woff2') format('woff2'),
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    url('../fonts/Source_Sans_3/source-sans-3-v9-greek_latin-600.ttf') format('truetype');
+  /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+
+/* source-sans-3-700 - greek_latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Source_Sans_3';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/Source_Sans_3/source-sans-3-v9-greek_latin-700.woff2') format('woff2'),
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    url('../fonts/Source_Sans_3/source-sans-3-v9-greek_latin-700.ttf') format('truetype');
+  /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+
+/* source-sans-3-800 - greek_latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Source Sans 3';
+  font-style: normal;
+  font-weight: 800;
+  src: url('../fonts/Source_Sans_3/source-sans-3-v9-greek_latin-800.woff2') format('woff2'),
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    url('../fonts/Source_Sans_3/source-sans-3-v9-greek_latin-800.ttf') format('truetype');
+  /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Josefin_Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/Josefin_Sans/josefin-sans-v25-latin-600.eot');
+  /* IE9 Compat Modes */
+  src: url('../fonts/Josefin_Sans/josefin-sans-v25-latin-600.eot?#iefix') format('embedded-opentype'),
+    /* IE6-IE8 */
+    url('../fonts/Josefin_Sans/josefin-sans-v25-latin-600.woff2') format('woff2'),
+    /* Super Modern Browsers */
+    url('../fonts/Josefin_Sans/josefin-sans-v25-latin-600.woff') format('woff'),
+    /* Modern Browsers */
+    url('../fonts/Josefin_Sans/josefin-sans-v25-latin-600.ttf') format('truetype'),
+    /* Safari, Android, iOS */
+    url('../fonts/Josefin_Sans/josefin-sans-v25-latin-600.svg#JosefinSans') format('svg');
+  /* Legacy iOS */
+}
+
+#root {
+  font-family: "Source_Sans_3";
+  background-color: colors.$bg-main;
+  color: colors.$font-main;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+}
+
+a:hover {
+  color: inherit;
+}
+
+button {
+  display: block;
+  cursor: pointer;
+  outline: none;
+  padding: 0px;
+  overflow: hidden;
+  background-color: transparent;
+  border: none;
+  line-height: 1;
+}
+
+.primary-button {
+  background-color: colors.$accent;
+  color: colors.$font-secondary;
+  border-radius: 4px;
+  padding: 12px 32px;
+  opacity: 1;
+  transition: opacity 200ms;
+}
+
+.primary-button:hover {
+  opacity: 0.9;
+}
+
+.secondary-button {
+  background-color: #e0e0e0;
+  color: colors.$font-main;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  padding: 12px 32px;
+  opacity: 1;
+  transition: opacity 200ms, border-color 200ms;
+}
+
+.secondary-button:hover {
+  // opacity: 0.9;
+  border: 1px solid #7a7a7a;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: auto;
+}
+
+button:disabled:hover {
+  opacity: 0.6;
+}
+
+.error-message {
+  font-size: 15px;
+  color: rgb(254, 42, 42);
+  line-height: 1.2;
+}
+
+p {
+  font-size: 18px;
+}

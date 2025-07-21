@@ -1,0 +1,55 @@
+@use '../../../../../assets/css/scss/foundation/colors';
+
+.sidebar {
+  visibility: hidden;
+  position: fixed;
+  right: -45vw;
+  width: 45vw;
+  min-width: 150px;
+  height: 100vh;
+  z-index: 499;
+  background-color: colors.$bg-main;
+  transition: 0.3s;
+}
+
+.sidebar.active {
+  visibility: visible;
+  right: 0;
+}
+
+.sidebar__top {
+  height: 100px;
+}
+
+.sidebar__top p {
+  font-size: 20px;
+}
+
+.sidebar__navlinks {
+  height: calc(100vh - 100px);
+  position: relative;
+}
+
+.sidebar__navlinks p {
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.sidebar__navlink.active {
+  font-weight: 600;
+}
+
+.sidebar__auth-buttons {
+  position: absolute;
+  bottom: 0;
+}
+
+.sidebar__signup-button,
+.sidebar__login-button {
+  padding: 12px 0;
+  width: 100%;
+}
+
+.sidebar__logout-button img {
+  width: 45px;
+}

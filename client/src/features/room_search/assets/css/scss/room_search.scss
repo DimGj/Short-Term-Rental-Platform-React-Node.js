@@ -1,0 +1,73 @@
+@use '../../../../../assets/css/scss/foundation/colors';
+
+.room-search-form .form-label {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.room-search-form .form-floating .form-label {
+  color: colors.$font-main;
+  margin-left: 0.25rem;
+}
+
+.room-search-form .form-control,
+.room-search-form .form-select,
+.room-search-form__submit-button {
+  font-size: 18px;
+  height: 65px !important;
+  border-radius: 4px;
+  background-color: colors.$bg-main;
+  padding-right: 0.75rem !important;
+  padding-left: 0.75rem !important;
+}
+
+.room-search-form .form-select {
+  cursor: pointer;
+}
+
+.room-search-form__date {
+  flex-direction: row-reverse;
+  padding-top: 2rem !important;
+}
+
+.room-search-form .submit-button__wrapper {
+  background-color: colors.$bg-main;
+  border-radius: 4px;
+}
+
+.room-search-form__submit-button {
+  background-color: colors.$accent;
+  color: colors.$font-secondary;
+  opacity: 1;
+  transition: opacity 200ms;
+}
+
+.room-search-form__submit-button:hover {
+  opacity: 0.9;
+}
+
+.room-search-form__submit-button p {
+  font-size: 20px;
+  font-weight: 500;
+  padding-bottom: 1px;
+}
+
+.room-search-form .error-message-wrapper {
+  background-color: #f3f3f3d1;
+  border-radius: 4px;
+  padding: 1rem 1.5rem;
+}
+
+@media (min-width: 992px) {
+
+  .room-search-form .form-label,
+  .room-search-form .form-control,
+  .room-search-form .form-select,
+  .room-search-form__submit-button {
+    font-size: 20px;
+  }
+
+  .room-search-form__submit-button p {
+    font-size: 22px;
+  }
+}

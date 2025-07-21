@@ -1,0 +1,11 @@
+@use "./foundation/colors";
+
+.message-row,
+.message-title {
+  max-width: 650px;
+}
+
+.message-title {
+  font-size: 30px;
+  font-weight: 400;
+}

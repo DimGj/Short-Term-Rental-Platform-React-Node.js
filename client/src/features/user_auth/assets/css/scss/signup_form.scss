@@ -1,0 +1,53 @@
+@use "../../../../../assets/css/scss/foundation/colors";
+
+.signup-form {
+  position: absolute;
+  width: 94vw;
+  max-width: 400px;
+  top: 50vh;
+  left: 50vw;
+  margin-top: -331px;
+  margin-left: max(calc(-94vw / 2), -200px);
+  background-color: colors.$bg-main;
+  border-radius: 4px;
+  z-index: 20;
+}
+
+.signup-form .form-label {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.signup-form .form-select {
+  height: 58px;
+}
+
+.signup-form__submit-button {
+  background-color: colors.$accent;
+  border-radius: 4px;
+  color: colors.$font-secondary;
+  padding: 16px 32px;
+  opacity: 1;
+  transition: opacity 200ms;
+}
+
+.signup-form__submit-button:hover {
+  opacity: 0.9;
+}
+
+.signup-form__submit-button p {
+  font-size: 20px;
+  font-weight: 500;
+  padding-bottom: 1px;
+}
+
+.signup-form__info-message {
+  font-size: 15px;
+  opacity: 0.9;
+}
+
+@media (min-width: 576px) {
+  .signup-form {
+    margin-left: -200px;
+  }
+}

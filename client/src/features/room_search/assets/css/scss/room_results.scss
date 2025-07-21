@@ -1,0 +1,140 @@
+@use '../../../../../assets/css/scss/foundation/colors';
+
+.no-spinners {
+  -moz-appearance: textfield;
+}
+
+.no-spinners::-webkit-outer-spin-button,
+.no-spinners::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.room-results__title {
+  font-weight: 400;
+  font-size: 28px;
+  // opacity: 0.95;
+}
+
+.room-results__page-select-title {
+  opacity: 0.95;
+}
+
+.room-results__page-button {
+  background-color: #e0e0e0;
+  border-radius: 2px;
+  padding: 8px 12px;
+  font-weight: 500;
+}
+
+.room-results__page p {
+  opacity: 0.95;
+}
+
+.room-results__filters-button {
+  padding: 10px 18px 10px 16px;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  // border: 1px solid 
+}
+
+.room-results__filters-button img {
+  width: 25px;
+}
+
+.room-results__filters-column {
+  display: none;
+  position: absolute;
+  background-color: colors.$bg-main;
+  width: 100vw;
+  left: 0;
+  z-index: 5;
+}
+
+.room-results__filters-column.active {
+  display: block;
+}
+
+.room-results__filters-title {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.filters__inner-title {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.filters__save-button {
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  padding: 12px 24px;
+}
+
+.filters__reset-button {
+  padding: 12px 24px;
+  text-decoration: underline;
+}
+
+.filters__reset-button p {
+  font-size: 16px;
+}
+
+.filters__save-button p {
+  font-size: 16px;
+}
+
+.room-cell__wrapper {
+  // border: 1px solid #333333;
+  // box-shadow: rgb(50 50 93 / 15%) 0px 13px 27px -5px, rgb(0 0 0 / 10%) 0px 4px 16px -8px;
+  // border-radius: 8px;
+  cursor: pointer;
+  transition: box-shadow 300ms;
+}
+
+.room-cell__wrapper:hover {
+  box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 15%) 0px 8px 16px -8px;
+  border-radius: 8px;
+}
+
+.room-cell {
+  border-bottom: 1px solid #d6d6d6;
+}
+
+.room-cell__wrapper:hover .room-cell {
+  border-color: transparent;
+}
+
+.room-cell__img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.room-cell__title {
+  font-weight: 500;
+}
+
+.room-cell__description {
+  opacity: .85;
+  max-width: 550px;
+}
+
+.room-cell__cost {
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.room-cell__cost-night {
+  font-size: 17px;
+  font-weight: 400;
+}
+
+@media (min-width: 992px) {
+  .room-results__filters-column {
+    display: block;
+    position: static;
+    border-right: 1px solid #d6d6d6;
+    flex: 0 0 auto;
+    width: 25%;
+  }
+}

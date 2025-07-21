@@ -1,0 +1,64 @@
+@use "./foundation/colors";
+
+.user__info-container {
+  width: 350px;
+  background-color: #e0e0e0;
+  border-radius: 6px;
+}
+
+.user__avatar {
+  width: 150px;
+  border-radius: 3px;
+}
+
+.placeholder__avatar {
+  width: 150px;
+  height: 150px;
+  background-color: #fff;
+  border-radius: 3px;
+}
+
+.placeholder__avatar p {
+  font-size: 14px;
+}
+
+.user__info-container h2 {
+  font-size: 28px;
+  // font-weight: 400;
+}
+
+.user__role-request-status-accepted {
+  color: rgb(15, 177, 15);
+}
+
+.user__role-request-status-pending {
+  color: blue;
+}
+
+.user__role-request-status-rejected {
+  color: red;
+}
+
+.user__approve-button,
+.user__deny-button {
+  padding: 14px 0 !important;
+  width: 100%;
+}
+
+.user__deny-button {
+  background-color: red !important;
+}
+
+.user__delete-button {
+  padding: 14px 32px;
+  border-radius: 4px;
+  background-color: transparent;
+  border: 1px solid red;
+  color: red;
+  transition: background-color 300ms, color 300ms;
+}
+
+.user__delete-button:hover {
+  background-color: red;
+  color: #fff;
+}

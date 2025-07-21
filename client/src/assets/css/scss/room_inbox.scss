@@ -1,0 +1,30 @@
+.room-inbox__chat {
+  border-bottom: 1px solid #d6d6d6;
+}
+
+.room-inbox__chat-date {
+  font-size: 15px;
+  opacity: 0.9;
+}
+
+.room-inbox__chat-delete-button {
+  padding: 14px 32px;
+  border-radius: 4px;
+  background-color: transparent;
+  border: 1px solid red;
+  color: red;
+  transition: background-color 300ms, color 300ms;
+  line-height: 1;
+
+}
+
+.room-inbox__chat-delete-button:hover {
+  background-color: red;
+  color: #fff;
+}
+
+.room-inbox__chat-view-button {
+  padding: 14px 32px !important;
+  border: 1px solid transparent;
+  line-height: 1;
+}
