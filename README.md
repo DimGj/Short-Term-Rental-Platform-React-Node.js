@@ -51,3 +51,31 @@ A key feature of the platform is its **personalized recommendation system**, pow
 cd client
 npm install
 npm start
+
+```
+Open http://localhost:3000 in your browser.
+
+
+#### Backend
+
+```bash
+cd server
+npm install
+node index.js
+```
+
+The backend will be available at http://localhost:3001.
+
+## 📄 Documentation
+
+For more details, refer to the project-specific documentation:
+
+- Frontend: client/README.md
+- Backend: server/README.md
+
+📌 Note: The documentation in both files is written in Greek.
+
+## 👥 Credits
+
+- Frontend Development: @leandrosK
+- Backend & Recommendation System: @dimgj
