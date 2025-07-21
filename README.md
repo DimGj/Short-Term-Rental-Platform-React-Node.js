@@ -70,10 +70,9 @@ The backend will be available at http://localhost:3001.
 
 For more details, refer to the project-specific documentation:
 
-- Frontend: client/README.md
-- Backend: server/README.md
+- readme.pdf
 
-📌 Note: The documentation in both files is written in Greek.
+📌 Note: The documentation is written in Greek.
 
 ## 👥 Credits
 
